@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container__form">
+        <form id="registro_formulario">
+            <h1 class="container__form--title">CREA TU CUENTA</h1>
+            <div class="container__form--campus">
+                <div class="campus">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name"  placeholder="Nombre" required="required" pattern="[A-Za-z]">
+                </div>
+                <div class="campus">
+                    <label for="surname">Apellido</label>
+                    <input type="text" id="surname" placeholder="Apellido" required="required" pattern="[A-Za-z]">
+                </div>
+                <div class="campus">
+                    <label for="user">Nombre de Usuario</label>
+                    <input type="text" id="user" placeholder="Usuario" required="required" pattern="[a-zA-Z0-9]+">
+                </div>
+                <div class="campus">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" id="email" placeholder="Correo electrónico" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                </div>
+                <div class="campus">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="*****" required="required" pattern=".{8,}" maxlength="25">
+                </div>
+            </div>
+            <a href="#" class="container__form--button">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                REGISTRATE
+                </a>
+            <div class="container__form--login">
+                <p>¿Ya tienes una cuenta? Inicia sesión <a href="login.html">AQUÍ</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Accion de envio (submit) del formulario de registro -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#registro_formulario").on("submit", sendForm);
+        });
+
+        function sendForm(){
+            event.preventDefault();
+            var formData = $(this).serialize();
+
+            $.ajax({
+                url: "", // Este es el url para la accion correspondiente con el formulario de contacto en el backend
+                data: formData,
+                success: function (data) {
+                    window.location.href = ""; // url de main
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

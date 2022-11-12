@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Inicio de Sesion</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">    
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+		<div class="contenedor__formulario">
+			<form id="login_formulario">
+				<legend>INICIAR SESION</legend>
+					<div class="contenedor__formulario--campos">
+						<div class="campo">
+							<label>Usuario</label>
+							<input class="input-text" type="text" placeholder="Tu Usuario">
+							</div>
+						<div class="campo">
+							<label>Contraseña</label>
+							<input class="input-password" type="password" placeholder="Tu Contraseña">
+						</div>
+					</div>
+					<div class="contenedor__formulario--links">
+						<a href="#" class="main__boton--neon">
+							<span id="span1"></span>
+							<span id="span2"></span>
+							<span id="span3"></span>
+							<span id="span4"></span>
+							INGRESAR
+							</a>
+						<div class="formulario__links--olvido">
+							<a href="#">Olvidé mi Usuario/Contraseña</a>
+						</div>
+						<p>No estas registrado?</p>
+						<div class="formulario__links--crear">
+							<a href="registro.html">Crea tu cuenta</a>
+						</div>
+					</div>
+			</form>
+		</div>
+    <!-- Accion de envio (submit) del formulario de login -->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#login_formulario").on("submit", sendForm);
+			});
+	
+			function sendForm(){
+				event.preventDefault();
+				var formData = $(this).serialize();
+	
+				$.ajax({
+					url: "", // Este es el url para la accion correspondiente con el formulario de contacto en el backend
+					data: formData,
+					success: function (data) {
+						window.location.href = ""; // url de main
+					}
+				});
+			}
+		</script>
+
+</body>
+</html>

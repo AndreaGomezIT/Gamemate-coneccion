@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--animate css-->
+    <h1 class="animate__animated animate__bounce"></h1>
+    <!--font awesone-->
+    <script src="https://kit.fontawesome.com/89aa161a7e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body class="contacto">
+    <div class="content">
+        <h1 class="logo"> CONTACTANOS </h1>
+        <div class="contact-wrapper">
+            <div class="contact-form">
+                <form id="contact-form">
+                    <p>
+                        <label for="nombre"> Nombre: </label>
+                        <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]">
+                    </p>
+                    <p>
+                        <label for="apellido"> Apellido: </label>
+                        <input type="text" name="apellido" id="apellido" pattern="[A-Za-z]">
+                    </p>
+                    <p>
+                        <label for="email"> Email: </label>
+                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                    </p>
+                    <p>
+                        <label for="asunto"> Asunto: </label>
+                        <input type="text" name="asunto" id="asunto" maxlength="100">
+                    </p>
+                    <p class="block">
+                        <label for="mensaje"> Mensaje: </label>
+                        <textarea name="mensaje" rows="3" maxlength="3000"></textarea>
+                    </p>
+                    <p class="block">
+                        <button type="submit">
+                            Enviar
+                        </button>
+                    </p>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i> 
+                        <p style="font-size: 0.9rem;">gamemate@gmail.com.ar</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i>
+                        <p style="font-size: 0.9rem;">@gamemate</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i>
+                        <p style="font-size: 0.9rem;">@gamemate</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-discord"></i>
+                        <p style="font-size: 0.9rem;">discord.com/gamemate</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <p style="font-size: 0.9rem;">@gamemate</p>
+                    </li>
+    
+                </ul>
+                <p class="contact-info-created_by">
+                    Game Mate creado por 
+                    <span>DesarrollAR</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Accion de envio (submit) del formulario de contacto -->
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#contact-form").on("submit", sendForm);
+        });
+
+        function sendForm(){
+            event.preventDefault();
+            var formData = $(this).serialize();
+
+            $.ajax({
+                url: "", // Este es el url para la accion correspondiente con el formulario de contacto en el backend
+                data: formData,
+                success: function (data) {
+                    window.location.href = ""; // url de main
+                }
+            });
+        }
+    </script>
+</body>
+</html>

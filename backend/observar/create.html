@@ -1,0 +1,51 @@
+{% include 'header.html' %}
+
+
+<form method= "post" action="/store" enctype="multipart/form-data">
+<!-- The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute). The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). The enctype attribute specifies how the form-data should be encoded when submitting it to the server. -->
+<!-- ESTO ES UNA CARD -->
+  <br>
+  <div class="cardBootstap">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">Datos a ingresar</h4>
+      <p class="card-text">
+  <!-- ESTO ES UN FORM GRUP       -->
+        <div class="mb-3">
+          <label for="textNombre" class="form-label">Nombre de foto</label>
+          <input type="text" name="textNombre" id="textNombre" class="form-control" placeholder="" aria-describedby="textNombre">
+        </div>
+        
+        <div class="mb-3">
+          <label for="textFoto" class="form-label">Ingrese foto</label>
+          <input type="file" name="textFoto" id="textFoto" class="form-control" placeholder="" aria-describedby="textNombre">
+        </div>
+        <p>Ingrese fotografo</p>
+        <div class="input-group mb-3">
+          <select name="textFtg" id="textFtg" class="form-select" >
+            <option selected>Fotografo......</option>
+            <option value="1">{{nombFotog[0][0]}} {{nombFotog[0][1]}}</option>
+            <option value="2">{{nombFotog[1][0]}} {{nombFotog[1][1]}}</option>
+            <option value="3">{{nombFotog[2][0]}} {{nombFotog[2][1]}}</option>
+            <option value="4">{{nombFotog[3][0]}} {{nombFotog[3][1]}}</option>
+            <option value="5">{{nombFotog[4][0]}} {{nombFotog[4][1]}}</option>
+            <option value="6">{{nombFotog[5][0]}} {{nombFotog[5][1]}}</option>
+            <option value="7">{{nombFotog[6][0]}} {{nombFotog[6][1]}}</option>
+            <option value="8">{{nombFotog[7][0]}} {{nombFotog[7][1]}}</option>                        
+          </select>
+          <label class="input-group-text" for="inputGroupSelect02">Options</label>
+        </div>
+        <div class="mb-3">
+          <input class="btn btn-success" id="btnCrear"  type="submit" value="AGREGAR">
+        </div>
+
+      </p>
+    </div>
+
+
+
+  </div>
+
+</form>

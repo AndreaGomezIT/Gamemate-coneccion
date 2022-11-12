@@ -1,0 +1,71 @@
+<!--Plantilla de perfil que está restringida a usuarios registrados. Los detalles del usuario se completarán en esta página.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mate</title>
+    <!--Iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><!--Iconos-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+    <!--Header-->
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="img/imagenprueba.png" alt="img-avatar">
+                    <button type="button" class="boton-avatar">
+                        <ion-icon name="image-outline"></ion-icon>
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                    <ion-icon name="image-outline"></ion-icon> Cambiar fondo
+                </button>
+            </div>
+        </div>
+
+        <!--Acerca del usuario-->
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">CosmeVzqz</h3>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <!--Info-->
+            <div class="perfil-usuario-footer">
+                <ul class="lista-datos">
+                    <li><ion-icon name="person-circle-outline"></ion-icon> Nombre</li>
+                    <li><ion-icon name="hourglass-outline"></ion-icon> Edad</li>
+                    <li><ion-icon name="male-outline"></ion-icon> Género</li>
+                    <li><ion-icon name="game-controller-outline"></ion-icon> Dispositivos</li>
+                </ul>
+                <ul class="lista-datos">
+                    <li><ion-icon name="locate-outline"></ion-icon> Ubicacion</li>
+                    <li><ion-icon name="gift-outline"></ion-icon> Cumpleaños</li>
+                    <li><ion-icon name="alarm-outline"></ion-icon> Disponibilidad horaria</li>
+                </ul>
+            </div>
+            
+            <!--Redes-->
+            <div class="redes-sociales">
+                <a href="" class="boton-redes facebook"><ion-icon name="logo-facebook"></ion-icon></i></a>
+                <a href="" class="boton-redes twitter"><ion-icon name="logo-instagram"></ion-icon></i></a>
+                <a href="" class="boton-redes instagram"><ion-icon name="logo-discord"></ion-icon></i></a>
+                <a href="" class="boton-redes facebook"><ion-icon name="logo-twitch"></ion-icon></i></a>
+                <a href="" class="boton-redes twitter"><ion-icon name="logo-twitter"></ion-icon></i></a>
+                <a href="" class="boton-redes instagram"><ion-icon name="logo-tiktok"></ion-icon></i></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

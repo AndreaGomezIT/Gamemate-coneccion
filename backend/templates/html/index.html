@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mate</title>
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--ICONOS-->
+    <link rel="icon" type="image/jpg" href="imagenes/mate.ico" />
+    <!--ANIMATE CSS-->
+    <h1 class="animate__animated animate__bounce"></h1>
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/89aa161a7e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="#" class="logo">GAME MATE</a>
+            <span class="menu-icon">Ver Menú</span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <button><a href="{{ url_for('registrar')}}">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>                        
+                        Registrarse</a>
+                    </button>
+
+                    <button>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Iniciar Sesión
+                    </button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--MAIN 1º SECCION-->
+    <main>
+        <section>
+            <div class="main__section--invitacion">
+                
+                <div class="main__grafico-d">
+                    <img class="main__grafico--img" src="img\gamer4.png" alt="">
+                </div>
+                
+                <div class="main__texto">
+                    <h1 style="text-align: center;">¿Que somos?</h1>
+                    <p>Si buscás diversión, querés conocer personas para jugar, o alguna relación de amistad gamer, tenés
+                    que estar en Game Mate. Con filtros específicos para que encuentres facilmente a tu crush gamer, es
+                    el lugar perfecto para conocer gente ideal para vos.</p>
+                    <p>En Game Mate sí que hay algo para todo el mundo. ¿Querés encontrar a tu crush gamer? Para esto
+                    estamos. ¿Buscás una nueva amistad? Claro que sí. ¿Querés armar una comunidad con personas que
+                    hablan tu idioma? Game Mate es para vos. Game Mate no es una simple página para buscar a otros
+                    amigos gamer, es el único sitio web argento donde personas con vivencias y experiencias de todo tipo
+                    se juntan para formar conexiones, recuerdos y mucho más.</p>
+                </div>
+
+                <div class="main__grafico">
+                    <img class="main__gamer1" src="img/gamer1.png" alt="">
+                </div>
+
+                <div class="main__texto">
+                    <h1 style="text-align: center;">¿Cómo funciona?</h1>
+                    <p>Como gamers sabemos lo díficultoso que puede ser conseguir equipo o incluso un duo para jugar, por eso con Game Mate queremos construir una sana comunidad para que todos juguemos en un ambiente sano.</p>
+                    <p> Game Mate conecta con gente de todo el país. Es muy simple, luego de registrar tu cuenta solo hace falta seleccionar el chat y autoamticamente podrás chatear con personas que compartan la misma pasión y ganas de jugar.</p>
+                </div>
+
+                <div class="main__boton">
+                    <img class="main__grafico--img2" src="img\gamer3.png" alt="">
+                    <a href="login.html" class="main__boton--neon">
+                        <span id="span1"></span>
+                        <span id="span2"></span>
+                        <span id="span3"></span>
+                        <span id="span4"></span>
+                        REGISTRATE
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!--MAIN 2º SECCION-->
+        
+    </main>
+    <!--FOOTER-->
+    <footer class="pie">
+        <div class="header">
+            <div class="nombre">
+                <p>GAME MATE</p>
+            </div>
+
+            <div class="redes">
+                <div class="grupo-redes">
+                    <a href="https://www.youtube.com/" target="blank"><img class="img" src="./img/youtube.png"
+                            alt="youtube"></a>
+                    <a href="https://www.twitch.tv/" target="blank"><img class="img" src="./img/twitchlila.png"
+                            alt="twitch"></a>
+                    <a href="https://www.instagram.com/" target="blank"><img class="img" src="./img/instagram.png"
+                            alt="instagram"></a>
+                </div>
+
+                <div class="grupo-redes">
+                    <a href="https://twitter.com/" target="blank"><img class="img" src="./img/twitter.png"
+                            alt="twitter"></a>
+                    <a href="https://discord.com/" target="blank"><img class="img" src="./img/discord.png"
+                            alt="discord"></a>
+                    <a href="https://www.tiktok.com/es/" target="blank"><img class="img" src="./img/tiktok.png"
+                            alt="tiktok"></a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!--Esta es una línea divisoria-->
+        <div class="section">
+            <div>
+                <a href="contacto.html">Contacto</a>
+                <a href="#">Acerca de Nosotros</a>
+            </div>
+            <div>
+                <a href="terminosycondiciones.html">Terminos y Condiciones</a>
+            </div>
+        </div>
+
+        <div class="derechos">
+            <p>@2022 Game Mate Todos los derechos reservados</p>
+            <p>Política de privacidad Términos y condiciones</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
